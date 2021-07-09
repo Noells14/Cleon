@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+    {% block title %}
+        {{titulo}}
+    {% endblock %}
+    {% block content %}
+
+    <br>
+    <div class="nosotros">
+        <h1>SOMOS TU MEJOR OPCION</h1>
+        <h3>Profesionales compremetidos con tus obras</h3>
+        <img src="{{ url_for('static', filename='image/cleon.png') }}" alt="cleon" width="30%">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-6 col-md-6">
+                <h1>NUESTRO COMPROMISO</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, excepturi voluptate accusamus eos facilis veritatis in quidem, natus animi nesciunt facere similique voluptatibus quia! Dicta id dignissimos non totam dolore.</p>
+            </div>
+            <div class="col-md-6">
+                <h1>POR QUE NOSOTROS</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, excepturi voluptate accusamus eos facilis veritatis in quidem, natus animi nesciunt facere similique voluptatibus quia! Dicta id dignissimos non totam dolore.</p>
+            </div>
+            <div class="offset-md-6 col-md-6">
+                <h1>LO QUE HACEMOS</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, excepturi voluptate accusamus eos facilis veritatis in quidem, natus animi nesciunt facere similique voluptatibus quia! Dicta id dignissimos non totam dolore.</p>
+            </div>
+            <div class="col-md-6">
+                <h1>NUESTROS LOGROS</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, excepturi voluptate accusamus eos facilis veritatis in quidem, natus animi nesciunt facere similique voluptatibus quia! Dicta id dignissimos non totam dolore.</p>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

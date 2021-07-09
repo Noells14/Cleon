@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+    {% block title %}
+        {{titulo}}
+    {% endblock %}
+    {% block content %}
+
+    <div class="principal">
+      <div class="texto_principal">
+        <h1>CONSTRUCCTORA LEON</h1>
+        <p>Nos Especializamos en todo tipo de proyectos arquitectonicos</p>
+        <p>Inovacion y responsabilidad nos define.</p>
+      </div>
+        <img class="construccion" src="{{ url_for('static', filename='image/Construccion.jpg') }}" alt="Construccion">
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <h2 class="text-center">NOS ESPECIALIZAMOS EN OBRA PRIVADA:</h2>
+      <br>
+      <div class="row">
+        <div class="col-md-4 contenedor">
+          <div class="texto-encima"><h5 class="text-center">VIVIENDA</h5></div>
+          <a href="javascript:viviendaModal()" id="vivienda_open"><img class="diseno" src="{{ url_for('static', filename='image/Construccion.jpg') }}" alt="Construccion" ></a>
+        </div>
+        <div class="col-md-4 contenedor">
+          <div class="texto-encima"><h5 class="text-center">DISEÑO ARQUITECTONICO</h5></div>
+          <a href="javascript:viviendaModal()" id="diseño_open">
+            <img id="" class="diseno" src="{{ url_for('static', filename='image/concretos.jpg') }}" alt="Construccion">
+          </a>
+        </div>
+        <div class="col-md-4 contenedor">
+          <div class="texto-encima"><h5 class="text-center">OFICINA</h5></div>
+          <a href="javascript:viviendaModal()" id="oficina_open">
+            <img id="" class="diseno" src="{{ url_for('static', filename='image/carpinteros.jpg') }}" alt="Construccion">
+          </a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <h2 class="text-center">OBRA PUBLICA:</h2>
+      <br>
+      <div class="row">
+        <div class="col-md-4 contenedor">
+          <div class="texto-encima"><h5 class="text-center">URBANIZACION</h5></div>
+          <a href="javascript:viviendaModal()" id="vivienda_open"><img class="diseno" src="{{ url_for('static', filename='image/Construccion.jpg') }}" alt="Construccion" ></a>
+        </div>
+        <div class="col-md-4 contenedor">
+          <div class="texto-encima"><h5 class="text-center">FUENTES ORNAMENTALES</h5></div>
+          <a href="javascript:viviendaModal()" id="diseño_open">
+            <img id="" class="diseno" src="{{ url_for('static', filename='image/concretos.jpg') }}" alt="Construccion">
+          </a>
+        </div>
+        <div class="col-md-4 contenedor">
+          <div class="texto-encima"><h5 class="text-center">ALUMBRADOS</h5></div>
+          <a href="javascript:viviendaModal()" id="oficina_open">
+            <img id="" class="diseno" src="{{ url_for('static', filename='image/carpinteros.jpg') }}" alt="Construccion">
+          </a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <h4 class="text-center">DESDE PEQUEÑAS REMODELACIONES HASTA GRANDES URBANIZACIONES.</h4>
+    </div>
+
+
+
+    <div class="modal-container" id="vivienda_modal">
+      <div id="modal">          
+        <div class="row">              
+          <div class="col-md-6 align-items-center">
+            <img class="vivienda" src="{{ url_for('static', filename='image/retro.png') }}" alt="Construccion">
+          </div>
+          <div class="col-md-6 align-items-center">
+            <div><h1>VIVIENDA</h1></div>
+            <hr>
+            <div class="textos">
+              <p><strong>1.- Preparacion y cimentacion.</strong></p>
+              <p><strong>2.- Estruccturacion de obra.</strong></p>
+              <p><strong>3.- Instalacion de plomeria y sistema electricidad.</strong></p>
+              <p><strong>4.- Instalacion de yesos y texturas.</strong></p>
+              <p><strong>5.- Detalles de interiores.</strong></p>
+              <p><strong>6.- Instalacion de pisos.</strong></p>
+              <p><strong>7.- Instalacion de mucbles y accesorios de baño.</strong></p>
+              <p><strong>8.- Instalacion de puertas y accesorios de jardin.</strong></p>
+            </div>                    
+            <hr>
+            <div>
+              <input type="button" class="btn-lg btn-block btn-secondary" id="vivienda_close" value="Cerrar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container" id="oficina_modal">
+      <div id="modal">          
+          <div class="row">              
+              <div class="col-md-6 align-items-center">
+                  <img class="vivienda" src="{{ url_for('static', filename='image/retro.png') }}" alt="Construccion">
+              </div>
+              <div class="col-md-6 align-items-center">
+                <div><h1>OFICINA</h1></div>
+                <hr>
+                <div class="textos">
+                  <p><strong>1.- Estructuracion.</strong></p>
+                  <p><strong>2.- Redistribucion de areas.</strong></p>
+                  <p><strong>3.- Remodelacion de espacios.</strong></p>
+                  <p><strong>4.- Instalacion de plomeria.</strong></p>
+                  <p><strong>5.- Instalacion electrica.</strong></p>
+                  <p><strong>6.- Instalacion de plafones falsos.</strong></p>
+                  <p><strong>7.- Instalacion de aire acondicionado.</strong></p>
+                  <p><strong>8.- Entregas totales.</strong></p>
+                </div>                    
+                <hr>
+                <div>
+                  <input type="button" class="btn-lg btn-block btn-secondary" id="oficina_close" value="Cerrar">
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="modal-container" id="diseño_modal">
+      <div id="modal">          
+          <div class="row">              
+              <div class="col-md-6 align-items-center">
+                  <img class="vivienda" src="{{ url_for('static', filename='image/retro.png') }}" alt="Construccion">
+              </div>
+              <div class="col-md-6 align-items-center">
+                <div><h1>DISEÑO ARQUITECTONICO</h1></div>
+                <hr>
+                <div class="textos">
+                  <p><strong>1.- Requerimientos y especificaciones.</strong></p>
+                  <p><strong>2.- Diseño en 2D y 3D.</strong></p>
+                  <p><strong>3.- Renderizacion de proyecto.</strong></p>
+                  <p><strong>4.- Entrega de planos.</strong></p>
+                  <p><strong>5.- Ejecucion de proyectos.</strong></p>
+                </div>                    
+                <hr>
+                <div>
+                  <input type="button" class="btn-lg btn-block btn-secondary" id="diseño_close" value="Cerrar">
+                </div>
+              </div>
+          </div>
+      </div>               
+  </div>
+
+    {% endblock %}
