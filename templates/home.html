@@ -5,41 +5,43 @@
     {% endblock %}
     {% block content %}
 
-    <div class="principal">
-      <div class="texto_principal">
-        <h1>CONSTRUCCTORA LEON</h1>
-        <p>Nos Especializamos en todo tipo de proyectos arquitectonicos</p>
-        <p>Inovacion y responsabilidad nos define.</p>
+    <div class="comentarios">
+      <h1>NOS ESPECIALIZAMOS EN TODO TIPO DE PROYECTOS ARQUITECTONICOS</h1>
+      <h3>INOVACION Y RESPONSABILIDAD NOS DEFINE</h3>
+    </div>
+    <br>
+    <div class="container">
+      <div class="logo">
+        <img class="construccion" src="{{ url_for('static', filename='icon/leon.png') }}" alt="Construccion">
       </div>
-        <img class="construccion" src="{{ url_for('static', filename='image/Construccion.jpg') }}" alt="Construccion">
     </div>
     <br>
     <br>
-    <div class="container">
+    <div class="especialidad">
       <h2 class="text-center">NOS ESPECIALIZAMOS EN OBRA PRIVADA:</h2>
       <br>
       <div class="row">
         <div class="col-md-4 contenedor">
           <div class="texto-encima"><h5 class="text-center">VIVIENDA</h5></div>
-          <a href="javascript:viviendaModal()" id="vivienda_open"><img class="diseno" src="{{ url_for('static', filename='image/Construccion.jpg') }}" alt="Construccion" ></a>
+          <a href="javascript:viviendaModal()" id="vivienda_open"><img class="diseno" src="{{ url_for('static', filename='image/vivienda.jpg') }}" alt="Construccion" ></a>
         </div>
         <div class="col-md-4 contenedor">
           <div class="texto-encima"><h5 class="text-center">DISEÑO ARQUITECTONICO</h5></div>
           <a href="javascript:viviendaModal()" id="diseño_open">
-            <img id="" class="diseno" src="{{ url_for('static', filename='image/concretos.jpg') }}" alt="Construccion">
+            <img id="" class="diseno" src="{{ url_for('static', filename='image/diseño_arquitectonico.jpg') }}" alt="Construccion">
           </a>
         </div>
         <div class="col-md-4 contenedor">
           <div class="texto-encima"><h5 class="text-center">OFICINA</h5></div>
           <a href="javascript:viviendaModal()" id="oficina_open">
-            <img id="" class="diseno" src="{{ url_for('static', filename='image/carpinteros.jpg') }}" alt="Construccion">
+            <img id="" class="diseno" src="{{ url_for('static', filename='image/oficina.jpg') }}" alt="Construccion">
           </a>
         </div>
       </div>
     </div>
     <br>
     <br>
-    <div class="container">
+    <!-- <div class="container">
       <h2 class="text-center">OBRA PUBLICA:</h2>
       <br>
       <div class="row">
@@ -62,7 +64,7 @@
       </div>
     </div>
     <br>
-    <br>
+    <br> -->
     <div class="container">
       <h4 class="text-center">DESDE PEQUEÑAS REMODELACIONES HASTA GRANDES URBANIZACIONES.</h4>
     </div>
