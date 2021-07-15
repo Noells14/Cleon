@@ -1,0 +1,36 @@
+{% macro formContacto(form) %}
+    {{ form.csrf_token }}
+
+    <div class="form-group">
+        {{ form.nombre.label }}
+        {% if form.nombre.errors %}
+            {{ form.nombre(class='form-control is-invalid') }}
+        {% else %}
+            {{ form.nombre(class='form-control') }}
+        {% endif %}
+        {% for error in form.nombre.errors %}
+			<div class="invalid-feedback">{{ error }}</div>
+		{% endfor %}
+        {{ form.correo.label }}
+        {% if form.correo.errors %}
+            {{ form.correo(class='form-control is-invalid') }}
+        {% else %}
+            {{ form.correo(class='form-control') }}
+        {% endif %}
+        {% for error in form.correo.errors %}
+			<div class="invalid-feedback">{{ error }}</div>
+		{% endfor %}
+        {{ form.comentario.label }}
+        {% if form.comentario.errors %}
+            {{ form.comentario(class='form-control is-invalid') }}
+        {% else %}
+            {{ form.comentario(rows=10, class='form-control') }}
+        {% endif %}
+        {% for error in form.comentario.errors %}
+			<div class="invalid-feedback">{{ error }}</div>
+		{% endfor %}
+        <br>
+        {{ form.enviar(class='form-control boton_enviar')}}
+    </div>
+
+{% endmacro %}
